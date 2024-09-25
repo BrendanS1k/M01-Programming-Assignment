@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class M01_Programming_Assignment_6_25 {
+	//Main Method
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in); // Create a scanner
+
+		//Ask the user to enter milliseconds
+		System.out.print("Enter milliseconds: ");
+		long millis = input.nextLong();
+
+		//Converts milliseconds to hours, minutes, and seconds
+		System.out.println("hours:minuties:seconds: " + convertMillis(millis));
+	}
+
+	//Method convertMillis converts milliseconds to hours, minuties and seconds */
+	public static String convertMillis(long millis) {
+		//Gets total seconds
+		millis /= 1000;
+
+		//Gets current minute and second
+		String currentMinuteAndSecond = "";
+		for (int i = 0; i < 2; i++) {
+			currentMinuteAndSecond = ":" + millis % 60 + currentMinuteAndSecond;
+			millis /= 60;
+		}
+		return millis + currentMinuteAndSecond;
+	}
+}
