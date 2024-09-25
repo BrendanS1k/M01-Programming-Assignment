@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class M01_Programming_Assignment_6_25 {
 	//Main Method
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in); // Create a scanner
+                //Create a scanner
+		Scanner input = new Scanner(System.in);
 
 		//Ask the user to enter milliseconds
 		System.out.print("Enter milliseconds: ");
